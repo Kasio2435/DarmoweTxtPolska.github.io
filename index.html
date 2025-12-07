@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Najlepsze Txt Polska</title>
 
-  <!-- Favicon 8x8 -->
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-8x8.png">
 
   <style>
@@ -53,54 +52,22 @@
       flex-wrap:wrap;
     }
 
+    /* ▼▼▼ TU SĄ PRZYWRÓCONE KAFELKI ▼▼▼ */
     .links a{
       display:inline-block;
       padding:10px 18px;
       min-width:160px;
       text-decoration:none;
-      color:#000;            /* czarny tekst */
-      background:#fff;       /* białe kafelki */
+      color:#000;
+      background:#fff;
       border-radius:10px;
       font-weight:600;
       transition:transform .12s ease,opacity .12s ease;
     }
 
     .links a:hover{
-      transform:scale(1.06);  /* delikatne powiększenie */
+      transform:translateY(-4px); /* PODSKAKIWANIE, NIE SKALOWANIE */
     }
+    /* ▲▲▲ KONIEC PRZYWRÓCONYCH KAFELKÓW ▲▲▲ */
 
     .links a.disabled{
-      pointer-events:none;
-      opacity:0.6;
-    }
-
-    .small{
-      margin-top:14px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    @media (max-width:420px){
-      .links a{
-        min-width:140px;
-        padding:10px 12px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h1>Najlepsze Txt Polska</h1>
-
-    <nav class="links" aria-label="Główne linki">
-      <!-- Twoje działające przejście do podstrony -->
-      <a href="kasiopack.html" id="kasiopack">Kasiopack</a>
-
-      <a href="#" class="disabled" aria-disabled="true">Wkrótce dostępne</a>
-      <a href="#" class="disabled" aria-disabled="true">Wkrótce dostępne</a>
-    </nav>
-
-    <div class="small">By: Kasio2435</div>
-  </div>
-</body>
-</html>
