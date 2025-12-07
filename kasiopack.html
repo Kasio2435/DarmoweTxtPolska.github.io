@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasiopack - Galeria</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      max-width: 1000px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .bottom-tile {
+      margin: 40px 0;
+      padding: 20px 30px;
+      background: #fff;
+      color: #000;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .bottom-tile:hover {
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galeria Kasiopack</h1>
+
+  <div class="gallery">
+    <img src="images/zdjecie1.jpg" alt="zdjęcie1">
+    <img src="images/zdjecie2.jpg" alt="zdjęcie2">
+    <img src="images/zdjecie3.jpg" alt="zdjęcie3">
+    <img src="images/zdjecie4.jpg" alt="zdjęcie4">
+    <!-- Dodaj więcej zdjęć w folderze /images/ -->
+  </div>
+
+  <a class="bottom-tile" href="https://example.com" target="_blank">
+    Kafelek z linkiem na dole
+  </a>
+
+</body>
+</html>
