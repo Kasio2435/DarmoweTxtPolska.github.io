@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kasiopack - Galeria</title>
+  <title>Kasiopack – Galeria</title>
+
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
+      padding: 20px;
       background: #000;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      color: white;
+      font-family: system-ui, sans-serif;
+      text-align: center;
     }
 
     h1 {
-      margin: 20px 0;
+      margin-bottom: 30px;
+      font-size: 36px;
     }
 
     .gallery {
@@ -25,15 +26,15 @@
       justify-content: center;
       gap: 12px;
       max-width: 1000px;
+      margin: auto;
     }
 
     .gallery img {
-      width: 200px;
-      height: 150px;
+      width: 250px;
+      height: 180px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 10px;
       transition: transform 0.2s;
-      cursor: pointer;
     }
 
     .gallery img:hover {
@@ -41,11 +42,13 @@
     }
 
     .bottom-tile {
-      margin: 40px 0;
-      padding: 20px 30px;
-      background: #fff;
-      color: #000;
+      margin: 50px auto 0 auto;
+      display: inline-block;
+      padding: 16px 28px;
+      background: white;
+      color: black;
       border-radius: 12px;
+      font-size: 18px;
       text-decoration: none;
       font-weight: bold;
       transition: transform 0.2s;
@@ -58,18 +61,19 @@
 </head>
 <body>
 
-  <h1>Galeria Kasiopack</h1>
+  <h1>Kasiopack – Galeria</h1>
 
+  <!-- Wrzucasz zdjęcia do folderu /images/ -->
   <div class="gallery">
     <img src="images/zdjecie1.jpg" alt="zdjęcie1">
     <img src="images/zdjecie2.jpg" alt="zdjęcie2">
     <img src="images/zdjecie3.jpg" alt="zdjęcie3">
     <img src="images/zdjecie4.jpg" alt="zdjęcie4">
-    <!-- Dodaj więcej zdjęć w folderze /images/ -->
   </div>
 
+  <!-- Kafelek na dole -->
   <a class="bottom-tile" href="https://example.com" target="_blank">
-    Kafelek z linkiem na dole
+    Kliknij tutaj – Link
   </a>
 
 </body>
