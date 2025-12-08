@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Najlepsze Txt Polska</title>
 
-  <!-- Favicon -->
+  <!-- Favicon (umieść favicon.png w tym samym folderze co index.html) -->
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
 
   <style>
     :root{
@@ -23,7 +24,7 @@
     body{
       background:var(--bg);
       color:var(--text);
-      font-family:system-ui,sans-serif;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -38,7 +39,8 @@
 
     h1{
       font-size:clamp(28px,6vw,56px);
-      margin-bottom:18px;
+      margin:0 0 18px 0;
+      letter-spacing:0.02em;
       font-weight:700;
     }
 
@@ -47,9 +49,12 @@
       gap:12px;
       justify-content:center;
       flex-wrap:wrap;
+      margin-top:12px;
     }
 
+    /* białe kafelki z czarnym tekstem i delikatnym podskokiem */
     .links a{
+      display:inline-block;
       padding:10px 18px;
       min-width:160px;
       text-decoration:none;
@@ -57,16 +62,16 @@
       background:#fff;
       border-radius:10px;
       font-weight:600;
-      transition:transform .12s ease;
+      transition:transform .12s ease,opacity .12s ease;
     }
 
     .links a:hover{
-      transform:translateY(-4px);
+      transform:translateY(-4px); /* podskok, nie skalowanie */
     }
 
     .links a.disabled{
-      opacity:0.6;
       pointer-events:none;
+      opacity:0.6;
     }
 
     .small{
@@ -74,16 +79,23 @@
       color:var(--muted);
       font-size:14px;
     }
+
+    @media (max-width:420px){
+      .links a{
+        min-width:140px;
+        padding:10px 12px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>Najlepsze Txt Polska</h1>
 
-    <nav class="links">
-      <a href="kasiopack.html">Kasiopack</a>
-      <a class="disabled">Wkrótce</a>
-      <a class="disabled">Wkrótce</a>
+    <nav class="links" aria-label="Główne linki">
+      <a href="kasiopack.html" id="kasiopack">Kasiopack</a>
+      <a href="#" class="disabled" aria-disabled="true">Wkrótce dostępne</a>
+      <a href="#" class="disabled" aria-disabled="true">Wkrótce dostępne</a>
     </nav>
 
     <div class="small">By: Kasio2435</div>
