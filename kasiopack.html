@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kasiopack – Galeria</title>
   <style>
-    :root{
-      --bg:#000;
-      --text:#fff;
-      --tile-bg:#fff;
-      --tile-text:#000;
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --tile-bg: #fff;
+      --tile-text: #000;
     }
 
     html, body {
@@ -62,7 +62,7 @@
       box-shadow: 0 14px 40px rgba(0,0,0,0.75);
     }
 
-    /* kafelek na dole, wyśrodkowany */
+    /* Kafelek na dole, wyśrodkowany */
     .bottom-tile {
       display: block;
       margin: 48px auto 24px;
@@ -83,7 +83,7 @@
       transform: translateY(-4px);
     }
 
-    @media (max-width:600px) {
+    @media (max-width: 600px) {
       .container { padding: 0 12px; }
       .bottom-tile { max-width: 100%; }
     }
@@ -94,12 +94,17 @@
     <h1>Kasiopack – Galeria</h1>
 
     <section class="gallery" aria-label="Galeria zdjęć">
-      <!-- 5 zdjęć - wgraj je do folderu images -->
-      <figure><img src="images/zdjecie1.jpg" alt="Zdjęcie 1" loading="lazy"></figure>
-      <figure><img src="images/zdjecie2.jpg" alt="Zdjęcie 2" loading="lazy"></figure>
-      <figure><img src="images/zdjecie3.jpg" alt="Zdjęcie 3" loading="lazy"></figure>
-      <figure><img src="images/zdjecie4.jpg" alt="Zdjęcie 4" loading="lazy"></figure>
-      <figure><img src="images/zdjecie5.jpg" alt="Zdjęcie 5" loading="lazy"></figure>
+      <!-- 5 zdjęć w folderze imagesimages -->
+      <figure><img src="imagesimages/zdjecie1.jpg" alt="Zdjęcie 1" loading="lazy"></figure>
+      <figure><img src="imagesimages/zdjecie2.jpg" alt="Zdjęcie 2" loading="lazy"></figure>
+      <figure><img src="imagesimages/zdjecie3.jpg" alt="Zdjęcie 3" loading="lazy"></figure>
+      <figure><img src="imagesimages/zdjecie4.jpg" alt="Zdjęcie 4" loading="lazy"></figure>
+      <figure><img src="imagesimages/zdjecie5.jpg" alt="Zdjęcie 5" loading="lazy"></figure>
     </section>
 
-    <a class="bott
+    <a class="bottom-tile" href="https://example.com" target="_blank" rel="noopener">
+      Kafelek z linkiem
+    </a>
+  </main>
+</body>
+</html>
