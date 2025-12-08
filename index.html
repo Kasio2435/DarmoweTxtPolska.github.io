@@ -5,9 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Najlepsze Txt Polska</title>
 
-  <!-- Favicon (umieść favicon.png w tym samym folderze co index.html) -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="shortcut icon" href="favicon.png">
+  <!-- favicon 8x8 -->
+  <link id="favicon" rel="icon" type="image/png" href="favicon-8x8.png">
+
+  <script>
+    const img = new Image();
+    img.src = 'favicon-8x8.png';
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = 32;
+      canvas.height = 32;
+      const ctx = canvas.getContext('2d');
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(img, 0, 0, 32, 32);
+      const favicon = document.getElementById('favicon');
+      favicon.href = canvas.toDataURL('image/png');
+    };
+  </script>
 
   <style>
     :root{
@@ -40,7 +55,6 @@
     h1{
       font-size:clamp(28px,6vw,56px);
       margin:0 0 18px 0;
-      letter-spacing:0.02em;
       font-weight:700;
     }
 
@@ -52,7 +66,6 @@
       margin-top:12px;
     }
 
-    /* białe kafelki z czarnym tekstem i delikatnym podskokiem */
     .links a{
       display:inline-block;
       padding:10px 18px;
@@ -66,7 +79,7 @@
     }
 
     .links a:hover{
-      transform:translateY(-4px); /* podskok, nie skalowanie */
+      transform:translateY(-4px);
     }
 
     .links a.disabled{
