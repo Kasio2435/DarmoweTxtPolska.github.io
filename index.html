@@ -5,69 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Najlepsze Txt Polska</title>
 
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-8x8.png">
-
   <style>
-    :root{
-      --bg:#000;
-      --text:#fff;
-      --muted:rgba(255,255,255,0.6);
-      --accent:#ffffff;
+    body {
+      background: #000;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: system-ui, sans-serif;
     }
 
-    html,body{
-      height:100%;
-      margin:0;
+    .card {
+      text-align: center;
     }
 
-    body{
-      background:var(--bg);
-      color:var(--text);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+    .links {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
     }
 
-    .card{
-      text-align:center;
-      max-width:720px;
-      width:100%;
+    .links a {
+      display: inline-block;
+      padding: 10px 18px;
+      min-width: 160px;
+      text-decoration: none;
+      color: #000;
+      background: #fff;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: transform .12s ease;
     }
 
-    h1{
-      font-size:clamp(28px,6vw,56px);
-      margin:0 0 18px 0;
-      letter-spacing:0.02em;
-      font-weight:700;
+    .links a:hover {
+      transform: translateY(-4px);
     }
 
-    .links{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
+    .links a.disabled {
+      opacity: 0.6;
+      pointer-events: none;
     }
+  </style>
+</head>
+<body>
 
-    /* ▼▼▼ TU SĄ PRZYWRÓCONE KAFELKI ▼▼▼ */
-    .links a{
-      display:inline-block;
-      padding:10px 18px;
-      min-width:160px;
-      text-decoration:none;
-      color:#000;
-      background:#fff;
-      border-radius:10px;
-      font-weight:600;
-      transition:transform .12s ease,opacity .12s ease;
-    }
+  <div class="card">
+    <h1>Najlepsze Txt Polska</h1>
 
-    .links a:hover{
-      transform:translateY(-4px); /* PODSKAKIWANIE, NIE SKALOWANIE */
-    }
-    /* ▲▲▲ KONIEC PRZYWRÓCONYCH KAFELKÓW ▲▲▲ */
+    <div class="links">
+      <a href="kasiopack.html">Kasiopack</a>
+      <a class="disabled">Wkrótce</a>
+      <a class="disabled">Wkrótce</a>
+    </div>
+  </div>
 
-    .links a.disabled{
+</body>
+</html>
