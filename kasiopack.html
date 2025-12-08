@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kasiopack – Galeria</title>
   <style>
     :root{
@@ -11,72 +11,61 @@
       --tile-bg:#fff;
       --tile-text:#000;
     }
-    html,body{
-      height:100%;
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
     }
 
-    .container{
-      max-width:920px;
+    .container {
+      max-width: 920px;
       margin: 20px auto 60px;
       padding: 0 16px;
       box-sizing: border-box;
+      text-align: center;
     }
 
-    h1{
-      text-align:center;
+    h1 {
       margin: 12px 0 26px;
-      font-size: clamp(20px,4vw,36px);
-      font-weight:700;
+      font-size: clamp(20px, 4vw, 36px);
+      font-weight: 700;
     }
 
-    /* GALERIA PIONOWA - jedno zdjęcie w rzędzie */
-    .gallery{
-      display:flex;
-      flex-direction:column;
-      gap:20px;
-      align-items:center; /* centrowanie zdjęć */
+    /* GALERIA PIONOWA */
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
     }
 
-    .gallery figure{
-      width:100%;
-      max-width:880px;
-      margin:0;
+    .gallery figure {
+      width: 100%;
+      max-width: 880px;
+      margin: 0;
     }
 
-    .gallery img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:10px;
-      object-fit:cover;
-      box-shadow:0 8px 24px rgba(0,0,0,0.6);
-      transition:transform .18s ease, box-shadow .18s ease;
-      cursor: zoom-in;
-      background:#111; /* widoczne jeśli brak obrazka */
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+      object-fit: cover;
+      display: block;
+      transition: transform .18s ease, box-shadow .18s ease;
     }
 
-    .gallery img:hover{
-      transform:translateY(-6px);
-      box-shadow:0 14px 40px rgba(0,0,0,0.75);
+    .gallery img:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.75);
     }
 
-    .caption{
-      color: rgba(255,255,255,0.7);
-      font-size:14px;
-      margin-top:8px;
-      text-align:left;
-    }
-
-    /* kafelek na dole WYŚRODKOWANY */
-    .bottom-tile{
-      display:block;           /* block + margin auto centruje */
-      margin: 48px auto 24px;  /* góra auto dół */
+    /* kafelek na dole, wyśrodkowany */
+    .bottom-tile {
+      display: block;
+      margin: 48px auto 24px;
       padding: 14px 26px;
       background: var(--tile-bg);
       color: var(--tile-text);
@@ -85,18 +74,18 @@
       font-weight: 700;
       font-size: 18px;
       max-width: 360px;
-      text-align:center;
+      text-align: center;
       box-shadow: 0 8px 24px rgba(0,0,0,0.5);
       transition: transform .12s ease;
     }
 
-    .bottom-tile:hover{
+    .bottom-tile:hover {
       transform: translateY(-4px);
     }
 
-    @media (max-width:600px){
-      .container{ padding:0 12px; }
-      .bottom-tile{ max-width: 100%; }
+    @media (max-width:600px) {
+      .container { padding: 0 12px; }
+      .bottom-tile { max-width: 100%; }
     }
   </style>
 </head>
@@ -105,35 +94,12 @@
     <h1>Kasiopack – Galeria</h1>
 
     <section class="gallery" aria-label="Galeria zdjęć">
-      <!-- 5 miejsc na zdjęcia - wrzuć pliki images/img1.jpg ... img5.jpg -->
-      <figure>
-        <img src="images/img1.jpg" alt="Zdjęcie 1" loading="lazy">
-        <figcaption class="caption">Opis zdjęcia 1 (opcjonalny)</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/img2.jpg" alt="Zdjęcie 2" loading="lazy">
-        <figcaption class="caption">Opis zdjęcia 2 (opcjonalny)</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/img3.jpg" alt="Zdjęcie 3" loading="lazy">
-        <figcaption class="caption">Opis zdjęcia 3 (opcjonalny)</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/img4.jpg" alt="Zdjęcie 4" loading="lazy">
-        <figcaption class="caption">Opis zdjęcia 4 (opcjonalny)</figcaption>
-      </figure>
-
-      <figure>
-        <img src="images/img5.jpg" alt="Zdjęcie 5" loading="lazy">
-        <figcaption class="caption">Opis zdjęcia 5 (opcjonalny)</figcaption>
-      </figure>
+      <!-- 5 zdjęć - wgraj je do folderu images -->
+      <figure><img src="images/zdjecie1.jpg" alt="Zdjęcie 1" loading="lazy"></figure>
+      <figure><img src="images/zdjecie2.jpg" alt="Zdjęcie 2" loading="lazy"></figure>
+      <figure><img src="images/zdjecie3.jpg" alt="Zdjęcie 3" loading="lazy"></figure>
+      <figure><img src="images/zdjecie4.jpg" alt="Zdjęcie 4" loading="lazy"></figure>
+      <figure><img src="images/zdjecie5.jpg" alt="Zdjęcie 5" loading="lazy"></figure>
     </section>
 
-    <!-- Kafelek NA ŚRODKU -->
-    <a class="bottom-tile" href="https://example.com" target="_blank" rel="noopener">Kafelek z linkiem</a>
-  </main>
-</body>
-</html>
+    <a class="bott
